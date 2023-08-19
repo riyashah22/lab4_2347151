@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<employees>
+    <employee id="101">
+        <personalInformation>
+            <firstName>Riya</firstName>
+            <lastName>Shah</lastName>
+            <dateOfBirth>2003-05-15</dateOfBirth>
+            <gender>Female</gender>
+        </personalInformation>
+        <employmentInformation>
+            <position>Software Engineer</position>
+            <salary>80000</salary>
+        </employmentInformation>
+        <contactInformation>
+            <email>riya@gmail.com</email>
+            <phoneNumber>9457387645</phoneNumber>
+        </contactInformation>
+    </employee>
+    <employee id="102">
+        <personalInformation>
+            <firstName>Hemant</firstName>
+            <lastName>Patel</lastName>
+            <dateOfBirth>1985-09-20</dateOfBirth>
+            <gender>Male</gender>
+        </personalInformation>
+        <employmentInformation>
+            <position>Marketing Manager</position>
+            <salary>75000</salary>
+        </employmentInformation>
+        <contactInformation>
+            <email>hemant@gmail.com</email>
+            <phoneNumber>9876542210</phoneNumber>
+        </contactInformation>
+    </employee>
+    <employee id="103">
+        <personalInformation>
+            <firstName>Michael</firstName>
+            <lastName>Johnson</lastName>
+            <dateOfBirth>1998-02-10</dateOfBirth>
+            <gender>Male</gender>
+        </personalInformation>
+        <employmentInformation>
+            <position>Accountant</position>
+            <salary>60000</salary>
+        </employmentInformation>
+        <contactInformation>
+            <email>michael.johnson@yahoo.com</email>
+            <phoneNumber>787482965</phoneNumber>
+        </contactInformation>
+    </employee>
+</employees>
