@@ -1,0 +1,17 @@
+<table border="1">
+  <tr>
+    <th>FirstName</th>
+    <th>LastName</th>
+    <th>DOB</th>
+    <th>Gender</th>
+  </tr>
+  <xsl:for-each select="employees/employee/personalInformation">
+    <tr>
+      <td><xsl:value-of select="firstName" /></td>
+      <td><xsl:value-of select="lastName" /></td>
+      <td><xsl:value-of select="dateOfBirth" /></td>
+      <td><xsl:value-of select="gender" /></td>
+    </tr>
+  </xsl:for-each>
+</table>
+<xsl:value-of select="personalInformation" />

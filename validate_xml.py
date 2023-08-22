@@ -1,13 +1,22 @@
-import xmlschema
+from lxml import etree
 
-xml_file = "employees.xml"
-xsd_file = "employee_schema.xsd"
+# Load XML
+xml_tree = etree.parse("employees.xml")
 
-validator = xmlschema.XMLSchema(xsd_file)
-if validator.is_valid(xml_file):
-    print("XML file is valid against the XSD schema.")
+# Load XSL
+xsl_transform = etree.XSLT(etree.parse("employee_transform.xsl"))
+
+# Apply XSLT transformation
+html_tree = xsl_transform(xml_tree)
+
+# Validate against XSD
+xmlschema = etree.XMLSchema(etree.parse("employee_schema.xsd"))
+if xmlschema.validate(xml_tree):
+    print("XML is valid against XSD.")
 else:
-    print("XML file is not valid against the XSD schema.")
-    print(validator.validate(xml_file))
-    for error in xmlschema.error_log:
-        print(f"  Line {error.line}, Column {error.column}: {error.message}")
+    print("XML is not valid against XSD.")
+    exit(1)
+
+# Write transformed HTML to a file
+with open("output.html", "wb") as output_file:
+    output_file.write(etree.tostring(html_tree, pretty_print=True))
